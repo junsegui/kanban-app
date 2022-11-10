@@ -5,4 +5,4 @@ export interface IModal {
   modal:{
     visible:boolean,
   };
-}
+};
