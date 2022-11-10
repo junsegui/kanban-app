@@ -7,13 +7,17 @@ import {
 } from "./StyledTopBar";
 import elipsis from "../../assets/icon-vertical-ellipsis.svg";
 import useModal from "../../hooks/useModal";
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../../redux/modal/actionModal";
 
 export const TopBar = () => {
-  const { isOpen, toggle } = useModal();
+  const dispatch = useDispatch();
   return (
     <StyledTopBar>
       <StyledTittle>Platform Launch</StyledTittle>
-      <StyledButton onClick={toggle}>+ Add New Task</StyledButton>
+      <StyledButton onClick={(e) => dispatch(toggleModal())}>
+        + Add New Task
+      </StyledButton>
       <StyledElipsis src={elipsis} />
     </StyledTopBar>
   );

@@ -6,30 +6,42 @@ import {
   Centered,
   CloseButton,
   DarkBG,
+  FormikContainer,
+  FormikForm,
   Heading,
   ModalA,
   ModalContent,
   ModalHeader,
 } from "./modal-styles";
 import useModal from "../../hooks/useModal";
-interface ModalType {
-  isOpen: boolean;
-  toggle: () => void;
-}
-export const Modal = (props: ModalType) => {
+import { toggleModal } from "../../redux/modal/actionModal";
+import { useDispatch } from "react-redux";
+import { addTaskInitialValues } from "../../formik/initialValues";
+import { addTaskValidationSchema } from "../../formik/validationSchema";
+import { Input } from "../formik-components/Input";
+import { Description } from "../formik-components/Description";
+
+export const Modal = () => {
+  const dispatch = useDispatch();
   return (
     <DarkBG>
       <Centered>
         <ModalA>
           <ModalHeader>
-            <Heading>Text</Heading>
+            <Heading>Add New Task</Heading>
           </ModalHeader>
-          <ModalContent>
-            Hola texto Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            R
-          </ModalContent>
+          <FormikContainer
+            initialValues={addTaskInitialValues}
+            validationSchema={addTaskValidationSchema}
+            onSubmit={(e) => {}}
+          >
+            <FormikForm>
+              <Input />
+              <Description />
+            </FormikForm>
+          </FormikContainer>
         </ModalA>
-        <CloseButton onClick={() => props.toggle}>X</CloseButton>
+        <CloseButton onClick={(e) => dispatch(toggleModal())}>X</CloseButton>
       </Centered>
     </DarkBG>
   );

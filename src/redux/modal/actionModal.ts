@@ -1,3 +1,5 @@
-export enum Constant {
-  TOGGLE_MODAL="TOGGLE_MODAL"
-}
+export const TOGGLE_MODAL = "TOGGLE_MODAL";
+
+export const toggleModal = () => ({
+  type: TOGGLE_MODAL,
+});

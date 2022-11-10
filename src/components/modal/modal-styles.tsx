@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Formik, Form } from "formik";
 
 export const DarkBG = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,7 +19,7 @@ export const Centered = styled.div`
 `;
 export const ModalA = styled.div`
   width: 550px;
-  height: 370px;
+  height: 95vh;
   background: white;
   color: white;
   z-index: 10;
@@ -26,19 +27,20 @@ export const ModalA = styled.div`
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
 `;
 export const ModalHeader = styled.div`
-  height: 50px;
+  height: 15%;
   background: white;
   overflow: hidden;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  display: flex;
+  align-items: center;
 `;
 export const Heading = styled.p`
-  margin: 0;
-  padding: 10px;
-  color: #2c3e50;
+  margin-left: 5%;
+  font-weight: 800;
+  color: #000112;
   font-weight: 500;
   font-size: 18px;
-  text-align: center;
 `;
 export const ModalContent = styled.p`
   padding: 10px;
@@ -68,4 +70,17 @@ export const CloseButton = styled.button`
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     transform: translate(-4px, 4px);
   }
+`;
+export const FormikContainer = styled(Formik)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+`;
+export const FormikForm = styled(Form)`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;

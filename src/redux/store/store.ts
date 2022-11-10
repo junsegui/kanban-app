@@ -6,11 +6,9 @@ import thunk from "redux-thunk"
 
 export interface rootState {
     modal:modal,
-}
+};
 
-const initialState = {}
-
-const middleware=[thunk]
+const middleware=[thunk];
 
 const store = createStore<rootState,any,any,any>(combineReducers({
     modal:modalReducer,
