@@ -20,6 +20,7 @@ import { addTaskInitialValues } from "../../formik/initialValues";
 import { addTaskValidationSchema } from "../../formik/validationSchema";
 import { Input } from "../formik-components/Input";
 import { Description } from "../formik-components/Description";
+import { Status } from "../formik-components/Status";
 
 export const Modal = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ export const Modal = () => {
             <FormikForm>
               <Input />
               <Description />
+              <Status />
             </FormikForm>
           </FormikContainer>
         </ModalA>

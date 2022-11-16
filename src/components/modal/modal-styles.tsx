@@ -19,7 +19,7 @@ export const Centered = styled.div`
 `;
 export const ModalA = styled.div`
   width: 550px;
-  height: 95vh;
+  height: 90vh;
   background: white;
   color: white;
   z-index: 10;
