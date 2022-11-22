@@ -19,7 +19,7 @@ export const Centered = styled.div`
 `;
 export const ModalA = styled.div`
   width: 550px;
-  height: 90vh;
+  height: 85vh;
   background: white;
   color: white;
   z-index: 10;
@@ -69,6 +69,7 @@ export const CloseButton = styled.button`
   &:hover {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     transform: translate(-4px, 4px);
+    color: red;
   }
 `;
 export const FormikContainer = styled(Formik)`

@@ -1,4 +1,7 @@
 export const addTaskInitialValues = {
-  task: "",
+  task:"",
+  status:"",
+  description:""
+
   
 };

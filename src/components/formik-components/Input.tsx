@@ -5,7 +5,7 @@ export const Input = () => {
   return (
     <InputContainer>
       <LabelStyled>Tittle</LabelStyled>
-      <InputStyled />
+      <InputStyled name="task" />
     </InputContainer>
   );
 };

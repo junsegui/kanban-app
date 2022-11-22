@@ -5,7 +5,11 @@ export const Description = () => {
   return (
     <DescriptionContainer>
       <LabelStyled>Description</LabelStyled>
-      <TextBox placeholder="e.g: review all the tasks from next week" />
+      <TextBox
+        component="textarea"
+        name="description"
+        placeholder="e.g: review all the tasks from next week"
+      />
     </DescriptionContainer>
   );
 };

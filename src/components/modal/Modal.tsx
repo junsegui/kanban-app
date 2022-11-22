@@ -21,6 +21,7 @@ import { addTaskValidationSchema } from "../../formik/validationSchema";
 import { Input } from "../formik-components/Input";
 import { Description } from "../formik-components/Description";
 import { Status } from "../formik-components/Status";
+import { Submit } from "../formik-components/Submit";
 
 export const Modal = () => {
   const dispatch = useDispatch();
@@ -34,12 +35,16 @@ export const Modal = () => {
           <FormikContainer
             initialValues={addTaskInitialValues}
             validationSchema={addTaskValidationSchema}
-            onSubmit={(e) => {}}
+            onSubmit={async (e) => {
+              const { task } = e;
+              alert("la tarea es" + task);
+            }}
           >
             <FormikForm>
               <Input />
               <Description />
               <Status />
+              <Submit />
             </FormikForm>
           </FormikContainer>
         </ModalA>
