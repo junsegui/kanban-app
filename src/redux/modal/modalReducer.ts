@@ -1,9 +1,10 @@
 import React from "react";
 import { modal } from "../states/types";
-import { TOGGLE_MODAL } from "./actionModal";
+import { TOGGLE_COLUMN_MODAL, TOGGLE_MODAL } from "./actionModal";
 
 const init:modal = {
     visible:false,
+    column:false
 };
 
 export const modalReducer = (state:modal=init,action:any) =>{
@@ -14,7 +15,11 @@ export const modalReducer = (state:modal=init,action:any) =>{
                 ...state,
                 visible:!state.visible,
             }
-
+        case TOGGLE_COLUMN_MODAL:
+            return{
+                ...state,
+                column:!state.column
+            }
         
         default:
             return state

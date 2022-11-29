@@ -4,8 +4,8 @@ import { InputContainer, InputStyled, LabelStyled } from "./Input-styles";
 export const Input = () => {
   return (
     <InputContainer>
-      <LabelStyled>Tittle</LabelStyled>
-      <InputStyled name="task" />
+      <LabelStyled>Name</LabelStyled>
+      <InputStyled name="name" />
     </InputContainer>
   );
 };

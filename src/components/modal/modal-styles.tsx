@@ -10,6 +10,7 @@ export const DarkBG = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  z-index: 1;
 `;
 export const Centered = styled.div`
   position: fixed;
@@ -25,6 +26,16 @@ export const ModalA = styled.div`
   z-index: 10;
   border-radius: 16px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+`;
+export const ModalB = styled.div`
+  width: 550px;
+  height: auto;
+  background: white;
+  color: white;
+  z-index: 10;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  z-index: 2;
 `;
 export const ModalHeader = styled.div`
   height: 15%;

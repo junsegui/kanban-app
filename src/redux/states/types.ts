@@ -2,6 +2,7 @@ import { string } from "yup"
 
 export interface modal {
     visible:boolean,
+    column:boolean,
 }
 export interface taskStates{
     boards:{

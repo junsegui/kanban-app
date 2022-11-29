@@ -1,4 +1,5 @@
 import React from "react";
+import { TaskColumn } from "../column-task/TaskColumn";
 import { Section } from "../section/Section";
 import { Container } from "./boards-styles";
 
@@ -7,6 +8,8 @@ export const BoardsDisplay = () => {
     <Container>
       <Section />
       <Section />
+
+      <TaskColumn />
     </Container>
   );
 };

@@ -5,6 +5,7 @@ import "./App.css";
 import { BoardsDisplay } from "./components/boards-display/BoardsDisplay";
 import { CC } from "./components/cc/CC";
 import { Container } from "./components/container/Container";
+import { ColumnModal } from "./components/modal/ColumnModal";
 import { Modal } from "./components/modal/Modal";
 import { SideBar } from "./components/side-bar/SideBar";
 import { TopBar } from "./components/top-bar/TopBar";
@@ -14,6 +15,7 @@ import { IModal } from "./types";
 
 function App() {
   const visible = useSelector((state: IModal) => state.modal);
+  const { column } = useSelector((state: any) => state.modal);
 
   return (
     <>
@@ -25,6 +27,7 @@ function App() {
         </CC>
       </Container>
       {visible.visible && <Modal />}
+      {column && <ColumnModal />}
     </>
   );
 }
