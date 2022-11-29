@@ -1,10 +1,15 @@
-import { task } from "../states/types";
+import { taskStates } from "../states/types";
+import { ADD_TASK } from "./actionTask";
 
-const init: task = {};
+const init: taskStates = {
+  boards: [],
+};
 
-export const taskReducer = (state: task = init, action: any) => {
+export const taskReducer = (state = init, action: any) => {
   const { type, payload } = action;
   switch (type) {
+    case ADD_TASK:
+      return {};
     default:
       return state;
   }

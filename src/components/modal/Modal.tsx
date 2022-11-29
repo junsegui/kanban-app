@@ -36,8 +36,9 @@ export const Modal = () => {
             initialValues={addTaskInitialValues}
             validationSchema={addTaskValidationSchema}
             onSubmit={async (e) => {
-              const { task } = e;
-              alert("la tarea es" + task);
+              const { description, status, task } = e;
+
+              console.log(status);
             }}
           >
             <FormikForm>
